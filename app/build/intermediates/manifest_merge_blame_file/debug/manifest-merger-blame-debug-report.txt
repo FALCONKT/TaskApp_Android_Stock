@@ -1,0 +1,92 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="jp.techacademy.kenji.takada.taskapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml
+10    <!-- 画面Sleep中でもBroadCastを受け取ることができるようにするPermission -->
+11    <uses-permission android:name="android.permission.WAKE_LOCK" />
+11-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:5:5-68
+11-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:5:22-65
+12
+13    <application
+13-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:7:5-51:19
+14        android:name="jp.techacademy.kenji.takada.taskapp.TaskApp"
+14-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:8:9-32
+15        android:allowBackup="true"
+15-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:9:9-35
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.0.2] C:\Users\KT\.gradle\caches\transforms-2\files-2.1\72e9643020dc5a909abe830efbde40d0\core-1.0.2\AndroidManifest.xml:22:18-86
+17        android:debuggable="true"
+18        android:icon="@mipmap/ic_launcher"
+18-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:10:9-43
+19        android:label="@string/app_name"
+19-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:11:9-41
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:12:9-54
+21        android:supportsRtl="true"
+21-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:13:9-35
+22        android:testOnly="true"
+23        android:theme="@style/AppTheme" >
+23-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:14:9-40
+24        <activity
+24-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:16:9-25:20
+25            android:name="jp.techacademy.kenji.takada.taskapp.MainActivity"
+25-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:17:13-41
+26            android:label="@string/app_name"
+26-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:18:13-45
+27            android:theme="@style/AppTheme" >
+27-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:19:13-44
+28            <intent-filter>
+28-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:20:13-24:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:21:17-69
+29-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:21:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:23:17-77
+31-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:23:27-74
+32            </intent-filter>
+33        </activity>
+34        <activity
+34-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:27:9-35:20
+35            android:name="jp.techacademy.kenji.takada.taskapp.InputActivity"
+35-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:28:13-42
+36            android:label="タスク"
+36-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:29:13-32
+37            android:parentActivityName="jp.techacademy.kenji.takada.taskapp.MainActivity"
+37-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:30:13-55
+38            android:theme="@style/AppTheme.NoActionBar" >
+38-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:31:13-56
+39            <meta-data
+39-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:32:13-34:84
+40                android:name="android.support.PARENT_ACTIVITY"
+40-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:33:17-63
+41                android:value="jp.techacademy.kenji.takada.taskapp.MainActivity" />
+41-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:34:17-81
+42        </activity>
+43
+44        <!-- 検索結果一覧画面　用　自動生成 -->
+45        <!-- <activity android:name=".CategioryActivity" -->
+46        <!-- android:label="やることの種類の検索結果" -->
+47        <!-- android:parentActivityName=".MainActivity" -->
+48        <!-- android:theme="@style/AppTheme.NoActionBar"> -->
+49        <!-- <meta-data -->
+50        <!-- android:name="android.support.PARENT_ACTIVITY" -->
+51        <!-- android:value="jp.techacademy.kenji.takada.taskapp.MainActivity"/> -->
+52        <!-- > -->
+53        <!-- </activity> -->
+54
+55
+56        <!-- TaskAlarmReceiver　を定義 -->
+57        <receiver android:name="jp.techacademy.kenji.takada.taskapp.TaskAlarmReceiver" />
+57-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:50:9-55
+57-->C:\Users\KT\TaskApp\app\src\main\AndroidManifest.xml:50:19-52
+58    </application>
+59
+60</manifest>

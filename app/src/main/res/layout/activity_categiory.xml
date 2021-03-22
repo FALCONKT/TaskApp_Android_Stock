@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    StatsBar等が表示された際にLayoutを自動調整させるため-->
+<!--    「android:fitsSystemWindows=”true”」を追記-->
+
+<!--   tools:context=".MainActivity"　は　 名前空間指定-->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".CategoryActivity">
+
+    <!--    ListViewを画面全体に配置-->
+    <!--    画面全体に配置するために
+    layout_widthとlayout_heightに
+    match_parent（親の要素と同じ大きさにする）を指定-->
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        />
+
+    <!--        android:layout_gravity="bottom"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/search_button"
+            android:hint="やることの種類を入力して検索" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="種類検索" />
+
+    </LinearLayout>
+
+
+
+    <!--    画面右下、Margineを16dp　layout_margin-->
+    <!--    画像を@drawable/plus、背景色を@color/colorPrimaryと指定-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/plus"
+        app:backgroundTint="@color/colorPrimary"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
